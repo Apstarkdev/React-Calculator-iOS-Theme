@@ -7,7 +7,6 @@ function App() {
   const [calc, setCalc] = useState("");
   const [result, setResult] = useState("");
   
-  const [historial, setHistorial] = useState("")
 
   const calculoDisplay = value => {
     setCalc(calc + value);
@@ -15,8 +14,6 @@ function App() {
   const equal = () => {
     setResult(eval(calc))
     setCalc(eval(calc))
-    setHistorial(historial.concat(calc.concat("=", result)));
-    console.log(historial)
   }
   return (
     <div className="App">
